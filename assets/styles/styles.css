@@ -17,41 +17,51 @@
     padding: 0;
     font-family: 'Crimson',Arial, Helvetica, sans-serif;
 }
+body {
+    background-color: #DDDDDD;
+}
 
+.container-fluid{
+    width: 100%;
+}
 /* ----------------------------------------------- */
 /* ---------------------HEADER-------------------- */
 /* ----------------------------------------------- */
 
 #banner {
-    background-color: #211F1C;
+    position: fixed;
+    width: 100%;
+    background-color: #222831;
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid white;
+    z-index: 999;
 }
 
 #hamburgerMenu {
     display: none;
     position: relative;
+  
 }
 
 #hamburgerMenu:checked ~ nav {
     transition: 0.5s;
-    top: 55px;
+    top: 54px;
 }
 
 nav {
     position: absolute;
-    
     width: 100%;
     text-align: center;
-    border-bottom: 1px solid white;
-    top: -400px;
+    /* border-bottom: 1px solid white; */
+    top: -500px;
     transition: 0.5s;
     z-index: -1;
+
 }
 
 nav ul {
-    background-color: #211F1C ;
+    background-color: #222831 ;
     width: 100%;
     text-transform: uppercase;
   
@@ -67,48 +77,311 @@ nav ul li {
 nav ul li a {
     color: white;
     padding: 40px 130px;
-    text-decoration: none
+    text-decoration: none;
 }
 
 nav ul li a:hover {
-    color: lightgrey;
+    color: #F05454;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 nav ul li a:active {
-    color: lightgrey;
-    border-bottom: 2px solid white;
+    color: #F05454;
+    border-bottom: 2px solid #F05454;
 }
+
+/* ----------------------------------------------- */
+/* ---------------------BODY---------------------- */
+/* ----------------------------------------------- */
+
+h3 {
+    text-align: center;
+    color: #DDDDDD;
+    padding-top: 3px;
+}
+
+.container-pub {
+    width: 100%;
+}
+
+.frame {
+    width: 150px;
+    height: 30px;
+    margin-left: 10px;
+    background-color: #222831;
+    transform: skew(-20deg);
+}
+
+/* ----------NOUVEAUTES & PROMOTIONS---------- */
+
+.new_vinyl,
+.discount_vinyl {
+    margin: 20px auto;
+    box-sizing: border-box;
+    width: 80%;
+    border: 2px solid lightgrey;
+}
+.vinyl {
+    position: relative;
+    margin: 10px auto;
+}
+
+.album_cover{
+    margin: auto;
+    width: 80%;
+}
+
+.album_cover img {
+    width: 100%;
+}
+
+.animation_vinyl {
+   display: none;
+}
+
+.price {
+    text-align: center;
+    margin: auto;
+}
+.price a {
+    text-decoration: none;
+    color: #222831;
+    font-size: 1.5em;
+    padding: 5px;
+    font-weight: 700;
+}
+.price a:hover {
+    color: #F05454;
+}
+.discount {
+    font-size: 1em;
+    text-decoration: line-through;
+    color: red;
+    margin-right: 10px;
+}
+
+/* -----------AVIS CLIENTS------------- */
+
+
+#container_reviews {
+    position: relative ;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;    
+}
+
+@keyframes movingReviews {
+    0% {
+        transform: translateY(-30px);
+    }
+    5%{
+        transform: translateY(-30px);
+    }
+    33% {
+        transform: translateY(-230px);
+    }
+    66% {
+        transform: translateY(-430px);
+    }
+    100% {
+        transform: translateY(-630px);
+    }
+}
+
+.customers_reviews {
+    position: relative;
+    margin: 60px auto 100px auto;
+    animation: 20s infinite alternate forwards movingReviews;
+}
+
+.frame_reviews {
+    position: relative;
+    margin: auto;
+    width: 350px;
+    height: 100px;
+    top: 25px;
+    left:15px;
+    padding-left: 100px;
+    border: 1px solid #222831;
+    background-color: lightgrey;
+    
+}
+
+
+
+.img_customers {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border: 5px solid #F05454;
+    border-radius: 50%;
+    top: -25%;
+    left: -15%;
+}
+
+#picture_customers1 {
+    background-image: url(../img/profil/female2_profil.jpg);
+    background-size: 110%;
+    background-position: 50% 45%;
+}
+
+#picture_customers2 {
+    background-image: url(../img/profil/male_profil.jpg);
+    background-size: 110%;
+    background-position: 50% 45%;
+}
+
+#picture_customers3 {
+    background-image: url(../img/profil/male2_profil.jpg);
+    background-size: 110%;
+    background-position: top;
+}
+
+#picture_customers4 {
+    background-image: url(../img/profil/female_profil.jpg);
+    background-size: 110%;
+    background-position: 50% 45%;
+}
+
+.name_customers {
+    margin: 15px 0;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.rate {
+    position: absolute;
+    display: inline-block;
+    top: 5%;
+    left: 80%;
+    font-weight: 700;
+}
+
+/* ----------------------------------------------- */
+/* --------------------FOOTER--------------------- */
+/* ----------------------------------------------- */
+
+footer {
+    background-color: #222831;
+    text-align: center;
+}
+
+#social_media {
+    padding: 10px 0;
+}
+
+#social_media a {
+    margin: 10px 20px;
+    transition: 0.5s;
+} 
+
+#social_media a:hover {
+    opacity: 0.6;
+}
+
+#legal_mentions {
+    padding: 10px;
+}
+
+#legal_mentions a {
+    text-decoration: none;
+    color: #DDDDDD;
+}
+
+#legal_mentions span {
+    color: #DDDDDD;
+}
+
+#legal_mentions a:hover {
+    color: #F05454;
+}
+
+/* ----------------------------------------------- */
+/* ----------------MEDIA QUERIES------------------ */
+/* ----------------------------------------------- */
+
+
+
+@media screen and (min-width:700px){
+    
+    .products {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .discount_vinyl,
+    .new_vinyl{
+       flex: 1 0 350px;
+
+    }
+}
+
+@media screen and (min-width:900px) {
+
+    .discount_vinyl,
+    .new_vinyl {
+        width: 25%;
+        flex: none;
+    }
+}
+
+@media screen and (min-width:1024px) {
+
+    #container-fluid {
+        width: 80%;
+        margin:auto;
+    }
+
+    .new_vinyl {
+        border: none;
+    }
+    .album_cover {
+        position: relative;
+        width: 70%;
+        margin: auto;
+        transition: 0.5s;
+    }
+
+    .vinyl {
+        width: 100%;
+        margin: auto;
+    }
+
+    .animation_vinyl {
+        position: absolute;
+        display: initial;
+        width: 70%;
+        top: 0%;
+        left:17%;
+        z-index: -1;
+        transition: 0.5s;
+    }
+
+    .animation_vinyl img {
+        width: 100%;
+    }
+    .price {
+        margin: 15px;
+    }
+    
+    .album_cover:hover {
+        transition: 0.5s;
+        transform: translateX(-17%);
+    }
+    .album_cover:hover ~ .animation_vinyl {
+        transition: 0.5s;
+        transform: translateX(17%);
+    }
+}
+    
+
+
+
+
+
+
+
+
+
+
+
+
