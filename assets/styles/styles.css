@@ -21,7 +21,7 @@ body {
     background-color: #DDDDDD;
 }
 
-.container-fluid{
+#container-fluid{
     width: 100%;
 }
 /* ----------------------------------------------- */
@@ -32,16 +32,23 @@ body {
     position: fixed;
     width: 100%;
     background-color: #222831;
-    display: flex;
-    justify-content: space-between;
     border-bottom: 1px solid white;
     z-index: 999;
 }
 
+#logo {
+    margin-left: 10px; 
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 #hamburgerMenu {
     display: none;
-    position: relative;
-  
+    position: relative; 
 }
 
 #hamburgerMenu:checked ~ nav {
@@ -49,46 +56,49 @@ body {
     top: 54px;
 }
 
-nav {
+#navBurger {
     position: absolute;
+    display: flex;
     width: 100%;
     text-align: center;
-    /* border-bottom: 1px solid white; */
     top: -500px;
     transition: 0.5s;
     z-index: -1;
-
 }
 
-nav ul {
+#navBurger ul {
     background-color: #222831 ;
     width: 100%;
     text-transform: uppercase;
   
 }
 
-nav ul li {
-    padding: 40px 0;
+#navBurger ul li {
     text-align: center;
     list-style-type: none;
-   
+    padding: 10px;
+    height: 100px;   
 }
 
-nav ul li a {
+#navBurger ul li a {
+    display: inline-block;
     color: white;
-    padding: 40px 130px;
+    padding: 40px 140px;
     text-decoration: none;
 }
 
-nav ul li a:hover {
+#navBurger ul li a:hover {
     color: #F05454;
 }
 
-nav ul li a:active {
+#navBurger ul li a:active {
     color: #F05454;
     border-bottom: 2px solid #F05454;
 }
 
+#mainNavbar {
+    display: none;
+}
 /* ----------------------------------------------- */
 /* ---------------------BODY---------------------- */
 /* ----------------------------------------------- */
@@ -99,22 +109,73 @@ h3 {
     padding-top: 3px;
 }
 
-.container-pub {
+#container-pub {
     width: 100%;
+    border: 4px solid;
 }
+
+
 
 .frame {
     width: 150px;
     height: 30px;
-    margin-left: 10px;
+    margin:5px 20px 0 10px;
     background-color: #222831;
     transform: skew(-20deg);
 }
 
-/* ----------NOUVEAUTES & PROMOTIONS---------- */
+/* ----------------CATEGORIES------------------ */
 
-.new_vinyl,
-.discount_vinyl {
+#sticky_menu {
+    position: relative;
+}
+
+#sticky_menu ul li {
+    padding: 5px;
+    text-align: center;
+    list-style-type: none; 
+    transform: skew(-20deg);
+}
+
+#sticky_menu a {
+    position: relative;
+    text-decoration: none;
+    padding: 5px 100px;
+    color: #222831;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+#sticky_menu a::before {
+    position: absolute;
+    content: " ";
+    color: #DDDDDD;
+    background-color: #222831;
+    inset: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s;
+    z-index: -1;
+}
+
+#sticky_menu a:hover {
+    color: #DDDDDD;
+}
+
+#sticky_menu a:hover::before {
+    color: #DDDDDD;
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+#sticky_menu a:active {
+    background-color: #222831;
+    color: #F05454;
+
+}
+
+/* ----------NOUVEAUTES & PROMOTIONS---------- */
+.frame_vinyl{  
     margin: 20px auto;
     box-sizing: border-box;
     width: 80%;
@@ -261,6 +322,7 @@ h3 {
 /* ----------------------------------------------- */
 
 footer {
+    position: relative;
     background-color: #222831;
     text-align: center;
 }
@@ -303,35 +365,92 @@ footer {
 
 @media screen and (min-width:700px){
     
+    /* --------------MAIN-------------- */
+
     .products {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
     }
-    .discount_vinyl,
-    .new_vinyl{
-       flex: 1 0 350px;
 
+    .frame_vinyl{
+       flex: 1 0 350px;
     }
 }
 
 @media screen and (min-width:900px) {
 
-    .discount_vinyl,
-    .new_vinyl {
-        width: 25%;
-        flex: none;
-    }
-}
+    /* -----------GENERAL--------------- */
 
-@media screen and (min-width:1024px) {
+    html {
+        scroll-behavior: smooth;
+    }
 
     #container-fluid {
-        width: 80%;
-        margin:auto;
+        width: 70%;
+        margin: auto;
     }
 
-    .new_vinyl {
+    /* -------------HEADER-------------- */
+
+     #navbar {
+        width: 70%;
+        margin: auto;
+     }
+
+     #burgerMenu {
+        display: none;
+     }
+
+     #mainNavbar {
+        display: initial;
+     }
+
+     #mainNavbar ul {
+        display: flex;
+        align-items: center;
+     }
+
+     #mainNavbar ul li {
+        text-align: center;
+        list-style-type: none;
+     }
+
+     #mainNavbar ul li a {
+        position: relative;
+        color: white;
+        text-decoration: none;
+        padding: 10px 25px;
+        font-size: 1em;
+        text-transform: uppercase;
+     }
+
+    #mainNavbar ul li:last-child {
+        margin-left: 20px;
+        transition: 0.5s;
+    }
+
+     #mainNavbar ul li:last-child a img {
+        position: absolute;
+        top: -5px;
+        right: 0px;   
+     }
+
+     #mainNavbar ul li a:hover {
+        color: #F05454;
+        transition: 0.5s;
+     }
+
+     #mainNavbar ul li:last-child:hover {
+        opacity: 0.6;
+     }
+
+
+    /* --------------MAIN-------------- */
+
+    .frame_vinyl {
+        width: 33%;
+        flex: none;
         border: none;
     }
     .album_cover {
@@ -349,15 +468,15 @@ footer {
     .animation_vinyl {
         position: absolute;
         display: initial;
-        width: 70%;
-        top: 0%;
-        left:17%;
+        width: 72%;
+        top: -0%;
+        left:15%;
         z-index: -1;
         transition: 0.5s;
     }
 
     .animation_vinyl img {
-        width: 100%;
+        width: 96%;
     }
     .price {
         margin: 15px;
@@ -371,9 +490,61 @@ footer {
         transition: 0.5s;
         transform: translateX(17%);
     }
-}
-    
+    /* --------------------FOOTER--------------------- */
 
+    #back-top {
+        position: absolute;
+        top: -50%;
+        right: 5%;
+    }
+}
+@media screen and (min-width:1200px) {
+/* 
+
+
+-----------MAIN---------------------
+    #category_menu {
+        box-sizing: border-box;
+        width: 15%;
+    }
+
+    #category_vinyl {
+        box-sizing: border-box;
+        width: 85%;
+    }
+
+    /* #category_page {
+        display: flex;
+    }  */
+/*                         POUR METTRE LE MENU EN STICKY LEFT SIDE
+     #sticky_menu a {
+        padding: 5px 20px 5px 0;
+        font-size: 1em;
+    }
+    section .frame:first {
+        display: none;
+    }
+    
+    #sticky_menu {
+        position: sticky;
+        top: 100px;
+    }
+
+    #sticky_menu ul {
+        border: 1px solid #222831;
+    }
+
+    #sticky_menu ul li {
+        text-align: left;
+    }  */
+
+    .frame_vinyl {
+        width: 25%;
+        flex: none;
+        border: none;
+    }
+}   
+    
 
 
 

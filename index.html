@@ -5,48 +5,68 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="./assets/img/vinyl/vinyl-removebg.png" />
+    <link rel="icon" type="image/png" href="./assets/img/icons8-vinyl-player-50.png" />
     <link rel="stylesheet" href="./assets/styles/styles.css">
-    <title>PREMIUM RECORD</title>
+    <title>PREMIUM RECORD - HOME</title>
 
 </head>
-
 <body>
-    <header class="container-fluid" id="banner">
-        <div>
-            <img src="https://place-hold.it/50x50" alt="logo">
+    <header  id="banner">
+        <div id="navbar">
+            <div id="logo">
+                <img src="./assets/img/icons8-vinyl-player-50.png" alt="logo">
+            </div>
+            <input type="checkbox" id="hamburgerMenu">
+            <label id="burgerMenu" for="hamburgerMenu"><img
+                    src="./assets/img/icons8-menu-material-outlined/burgermenu-48.png" alt="hamburger Menu"></label>
+            <nav id="navBurger">
+                <ul>
+                    <li>
+                        <a href="./index.html">Accueil</a>
+                    </li>
+                    <li>
+                        <a href="../pages/categories.html">Catégories</a>
+                    </li>
+                    <li>
+                        <a href="./pages/bone.html">Bones</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <nav id="mainNavbar">
+                <ul>
+                    <li>
+                        <a href="./index.html">Accueil</a>
+                    </li>
+                    <li>
+                        <a href="../pages/categories.html">Catégories</a>
+                    </li>
+                    <li>
+                        <a href="./pages/bone.html">Bone</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./assets/img/account-50.png" alt="Profil"></a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-        <input type="checkbox" id="hamburgerMenu">
-        <label id="burgerMenu" for="hamburgerMenu"><img
-                src="./assets/img/icons8-menu-material-outlined/burgermenu-48.png" alt="hamburger Menu"></label>
-        <nav>
-            <ul>
-                <li>
-                    <a href="./index.html">Accueil</a>
-                </li>
-                <li>
-                    <a href="#">Catégories</a>
-                </li>
-                <li>
-                    <a href="#">Bones</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
-            </ul>
-        </nav>
     </header>
     <main id="container-fluid">
-        <div class="container-pub">
+        <div id="container-pub">
             <img src="https://place-hold.it/600x300" alt="pub">
         </div>
         <section >
             <div class="frame">
-                <h3>NOUVEAUTES</h3>
+                <h3>NOUVEAUTÉS</h3>
             </div>
             <hr>
             <article class="products">
-                <div class="new_vinyl">
+                <div class="frame_vinyl">
                     <div class="vinyl">
                         <div class="album_cover">
                             <a href="#"><img src="./assets/img/vinyl/daftPunk_Alive1997.jpg" alt="DAFT PUNK - ALIVE 1997"></a>
@@ -60,7 +80,7 @@
                         <span>34,99 €</span>
                     </div>
                 </div>
-                <div class="new_vinyl">
+                <div class="frame_vinyl">
                     <div class="vinyl">
                         <div class="album_cover">
                             <a href="#"><img src="./assets/img/vinyl/petitBiscuit_presence.jpg" alt="PETIT BISCUIT - PRESENCE"></a>
@@ -74,7 +94,7 @@
                         <span>34,99 €</span>
                     </div>
                 </div>
-                <div class="new_vinyl">
+                <div class="frame_vinyl">
                     <div class="vinyl">
                         <div class="album_cover">
                             <a href="#"><img src="./assets/img/vinyl/daftPunk_randomAccesMemories.jpeg" alt="DAFT PUNK - RANDOM ACCESS MEMORIES"></a>
@@ -88,7 +108,7 @@
                         <span>34,99 €</span>
                     </div>
                 </div>
-                <div class="new_vinyl">
+                <div class="frame_vinyl">
                     <div class="vinyl">
                         <div class="album_cover">
                             <a href="#"><img src="./assets/img/vinyl/daftPunk_homerwork.jpg" alt="DAFT PUNK - HOMEWORK"></a>
@@ -104,14 +124,13 @@
                 </div>
             </article>
         </section>
-
         <section>
             <div class="frame">
                 <h3>PROMOTIONS</h3>
             </div>
             <hr>
             <article class="products">
-                <div class="discount_vinyl">
+                <div class="frame_vinyl">
                     <div class="vinyl">
                         <div class="album_cover">
                             <a href="#"><img src="./assets/img/vinyl/BTTF-Cover.jpg" alt="RETOUR VERS LE FUTUR - OST"></a> 
@@ -126,7 +145,7 @@
                         <span> 14,99 €</span>
                     </div>
                 </div>
-                <div class="discount_vinyl">
+                <div class="frame_vinyl">
                     <div class="vinyl">
                         <div class="album_cover">
                             <a href="#"><img src="./assets/img/vinyl/guardians_of_the_galaxy_awesome_mix_vol._1.jpg" alt="LES GARDIENS DE LA GALAXIE - OST"></a> 
@@ -141,13 +160,13 @@
                         <span>14,99 €</span>
                     </div>
                 </div>
-                <div class="discount_vinyl">
+                <div class="frame_vinyl">
                     <div class="vinyl">
                         <div class="album_cover">
                             <a href="#"><img src="./assets/img/vinyl/peaky-blinders-bande-originale.jpg" alt="PEAKY BLINDERS - OST"></a> 
                         </div>
                         <div class="animation_vinyl">
-                            <img src="./assets/img/vinyl/vinyl-removebg.png" alt="vinyl">
+                            <img src="./assets/img/vinyl/red_vinyl-removebg.png" alt="vinyl">
                         </div>
                     </div>
                     <div class="price">
@@ -156,7 +175,7 @@
                         <span>14,99 €</span>
                     </div>
                 </div>
-                <div class="discount_vinyl">
+                <div class="frame_vinyl">
                     <div class="vinyl">
                         <div class="album_cover">
                             <a href="#"><img src="./assets/img/vinyl/TRON-OST.jpg" alt="TRON - OST"></a> 
