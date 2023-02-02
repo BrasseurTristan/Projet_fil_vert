@@ -2,13 +2,79 @@
 /* ---------------------BODY---------------------- */
 /* ----------------------------------------------- */
 
+button {
+    width: 150px;
+    height: 30px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    border: 2px solid #ffc107;
+    background-color: #ffc107;
+    border-radius: 5px;
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6), inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+}
+
+button:hover {
+   background-color: #e6ac00;
+}
+
+button:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6), inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
 #description_vinyl {
     margin: 20px;
     font-size: 1.2em;
 }
 
-#playlist {
- 
+#playlist {    
     margin: 30px;
-    line-height: 30px;
+    
+}
+
+#playlist ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+#playlist li {
+    margin: 10px 0;
+   display: flex;
+   align-items: center;
+    justify-content: space-between;
+}
+
+#playlist li::before {
+    counter-reset: li;
+    counter-increment: li;
+}
+
+/* ----------------------------------------------- */
+/* ----------------MEDIA QUERIES------------------ */
+/* ----------------------------------------------- */
+
+@media screen and (min-width:700px){
+    
+    /* --------------MAIN-------------- */
+
+    .products {
+        width: 100%;
+        display: block;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (min-width:900px){
+
+    .products:last-of-type{
+        display: flex;
+        width: 100%;
+    }
+    
+    #description_vinyl,
+    .frame_vinyl{
+       flex: 1 0 150px;
+    }
+    .frame_vinyl:first-of-type {
+        width: 80%;
+    }
 }
