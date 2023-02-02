@@ -1,0 +1,94 @@
+/* ----------------------------------------------- */
+/* ---------------------BODY---------------------- */
+/* ----------------------------------------------- */
+
+
+
+#article {
+ width: 80%;
+ margin: auto;
+}
+
+#article p {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+#title_bone {
+    text-align: center;
+    font-size: 4em;
+    color: #222831;
+    margin: 20px;
+}
+
+#picture_profil img{
+    width: 50%;
+    height: 50%;
+    margin: 10px 25%;
+}
+
+#picture_profil figcaption {
+    text-align: center;
+}
+
+#img_bone {
+    margin: auto;
+    text-align: center;
+}
+
+.bone_vinyl {
+    box-sizing: border-box;
+    width: 30%;
+    margin: 20px;
+   
+}
+
+#link_category {
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    background-color: #222831;
+    color: #DDDDDD;
+    padding: 10px;
+    margin: 40px 0;
+    font-size: x-large;
+}
+
+#link_category:hover {
+    color: #F05454;
+}
+
+/* ----------------------------------------------- */
+/* ----------------MEDIA QUERIES------------------ */
+/* ----------------------------------------------- */
+
+@media screen and (min-width:900px) {
+
+    .bone_vinyl {
+        box-sizing: border-box;
+        width: 25%;
+        margin: 20px;
+       
+    }
+
+
+}
+@media screen and (min-width:1200px) {
+
+
+    figure {
+        float: left;
+        margin: 0;
+        padding: 0 20px 20px 20px;
+    }
+    #picture_profil img {
+        display: flex;
+        width: 340px;
+        height: 500px;
+        margin: 0;
+    }
+    #test {
+    min-height: 540px;
+    }
+}
+

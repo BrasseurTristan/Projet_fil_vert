@@ -1,0 +1,94 @@
+/* ----------------------------------------------- */
+/* ---------------------BODY---------------------- */
+/* ----------------------------------------------- */
+
+#sticky_menu {
+    position: relative;
+}
+
+#sticky_menu ul li {
+    padding: 5px;
+    text-align: center;
+    list-style-type: none; 
+    transform: skew(-20deg);
+}
+
+#sticky_menu a {
+    position: relative;
+    text-decoration: none;
+    padding: 5px 100px;
+    color: #222831;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+#sticky_menu a::before {
+    position: absolute;
+    content: " ";
+    color: #DDDDDD;
+    background-color: #222831;
+    inset: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s;
+    z-index: -1;
+}
+
+#sticky_menu a:hover {
+    color: #DDDDDD;
+}
+
+#sticky_menu a:hover::before {
+    color: #DDDDDD;
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+#sticky_menu a:active {
+    background-color: #222831;
+    color: #F05454;
+
+}
+
+
+/* ----------------------------------------------- */
+/* ----------------MEDIA QUERIES------------------ */
+/* ----------------------------------------------- */
+
+@media screen and (min-width:1200px) {
+/*  
+    #category_menu {
+        box-sizing: border-box;
+        width: 15%;
+    }
+
+    #category_vinyl {
+        box-sizing: border-box;
+        width: 85%;
+    }
+
+     #category_page {
+        display: flex;
+    }  
+                
+     #sticky_menu a {
+        padding: 5px 20px 5px 0;
+        font-size: 1em;
+    }
+    section .frame:first {
+        display: none;
+    }
+    
+    #sticky_menu {
+        position: sticky;
+        top: 100px;
+    }
+
+    #sticky_menu ul {
+        border: 1px solid #222831;
+    }
+
+    #sticky_menu ul li {
+        text-align: left;
+    }   */
+}

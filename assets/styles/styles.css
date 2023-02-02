@@ -29,7 +29,8 @@ body {
 /* ----------------------------------------------- */
 
 #banner {
-    position: fixed;
+    position: sticky;
+    top: 0;
     width: 100%;
     background-color: #222831;
     border-bottom: 1px solid white;
@@ -69,8 +70,7 @@ body {
 #navBurger ul {
     background-color: #222831 ;
     width: 100%;
-    text-transform: uppercase;
-  
+    text-transform: uppercase; 
 }
 
 #navBurger ul li {
@@ -111,10 +111,21 @@ h3 {
 
 #container-pub {
     width: 100%;
-    border: 4px solid;
+    margin: 10px 0;
+    background-image: url(../img/backgralfull4.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-
+#container-pub h1 {
+    color: #FFFFFF;
+    padding: 10%;
+    font-size: 5em;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 0 #222831, 2px -2px 0 #222831, -2px 2px 0 #222831, -2px -2px 0 #222831, 2px 0px 0 #222831, 0px 2px 0 #222831, -2px 0px 0 #222831, 0px -2px 0 #222831;
+}
 
 .frame {
     width: 150px;
@@ -122,56 +133,6 @@ h3 {
     margin:5px 20px 0 10px;
     background-color: #222831;
     transform: skew(-20deg);
-}
-
-/* ----------------CATEGORIES------------------ */
-
-#sticky_menu {
-    position: relative;
-}
-
-#sticky_menu ul li {
-    padding: 5px;
-    text-align: center;
-    list-style-type: none; 
-    transform: skew(-20deg);
-}
-
-#sticky_menu a {
-    position: relative;
-    text-decoration: none;
-    padding: 5px 100px;
-    color: #222831;
-    font-size: 1.2em;
-    font-weight: 700;
-}
-
-#sticky_menu a::before {
-    position: absolute;
-    content: " ";
-    color: #DDDDDD;
-    background-color: #222831;
-    inset: 0;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.4s;
-    z-index: -1;
-}
-
-#sticky_menu a:hover {
-    color: #DDDDDD;
-}
-
-#sticky_menu a:hover::before {
-    color: #DDDDDD;
-    transform: scaleX(1);
-    transform-origin: left;
-}
-
-#sticky_menu a:active {
-    background-color: #222831;
-    color: #F05454;
-
 }
 
 /* ----------NOUVEAUTES & PROMOTIONS---------- */
@@ -391,6 +352,7 @@ footer {
         margin: auto;
     }
 
+
     /* -------------HEADER-------------- */
 
      #navbar {
@@ -499,45 +461,7 @@ footer {
     }
 }
 @media screen and (min-width:1200px) {
-/* 
-
-
------------MAIN---------------------
-    #category_menu {
-        box-sizing: border-box;
-        width: 15%;
-    }
-
-    #category_vinyl {
-        box-sizing: border-box;
-        width: 85%;
-    }
-
-    /* #category_page {
-        display: flex;
-    }  */
-/*                         POUR METTRE LE MENU EN STICKY LEFT SIDE
-     #sticky_menu a {
-        padding: 5px 20px 5px 0;
-        font-size: 1em;
-    }
-    section .frame:first {
-        display: none;
-    }
-    
-    #sticky_menu {
-        position: sticky;
-        top: 100px;
-    }
-
-    #sticky_menu ul {
-        border: 1px solid #222831;
-    }
-
-    #sticky_menu ul li {
-        text-align: left;
-    }  */
-
+ 
     .frame_vinyl {
         width: 25%;
         flex: none;
