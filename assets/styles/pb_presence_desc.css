@@ -26,6 +26,16 @@ button:active {
     font-size: 1.2em;
 }
 
+#description_vinyl h2 {
+    margin: 20px;
+}
+
+#description_vinyl li {
+    list-style-type: none ;
+    margin: 10px;
+}
+
+
 #playlist {    
     margin: 30px;
     
@@ -41,11 +51,6 @@ button:active {
    display: flex;
    align-items: center;
     justify-content: space-between;
-}
-
-#playlist li::before {
-    counter-reset: li;
-    counter-increment: li;
 }
 
 /* ----------------------------------------------- */
@@ -77,4 +82,26 @@ button:active {
     .frame_vinyl:first-of-type {
         width: 80%;
     }
+}
+
+@media screen and (min-width:1100px) {
+    
+    .products {
+        display: flex;
+    }
+
+    .products:first-of-type .frame,
+    .products:first-of-type hr:first-of-type {
+        display: none;
+    }
+    
+    .frame_vinyl {
+        flex: 1 0 40%;
+    }
+
+    #description_vinyl {
+        flex: 1 0 30%;
+        padding: 10px 30px;
+    }
+
 }
