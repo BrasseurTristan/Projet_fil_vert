@@ -62,7 +62,7 @@ body {
     display: flex;
     width: 100%;
     text-align: center;
-    top: -500px;
+    top: -700px;
     transition: 0.5s;
     z-index: -1;
 }
